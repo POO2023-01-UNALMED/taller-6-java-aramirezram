@@ -8,7 +8,7 @@ public class Vehiculo {
 	public Fabricante fabricante;
 	static public int automoviles,camionetas,camiones;
 	
-	Vehiculo(String placa,int puertas,int velocidadMaxima,String nombre,int precio,int peso,String traccion,Fabricante fabricante){
+	public Vehiculo(String placa,int puertas,int velocidadMaxima,String nombre,int precio,int peso,String traccion,Fabricante fabricante){
 		if(this.getClass().getName()=="vehiculos.Camion") camiones++;
 		if(this.getClass().getName()=="vehiculos.Camioneta") camionetas++;
 		if(this.getClass().getName()=="vehiculos.Automóvil") automoviles++;
