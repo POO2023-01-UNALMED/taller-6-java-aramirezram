@@ -2,11 +2,11 @@ package vehiculos;
 
 
 public class Vehiculo {
-	protected String placa,nombre,traccion;
-	protected int puertas,precio,peso,velocidadMaxima;
-	static int CantidadVehiculos;
-	private Fabricante fabricante;
-	static private int automoviles,camionetas,camiones;
+	public String placa,nombre,traccion;
+	public int puertas,precio,peso,velocidadMaxima;
+	public static int CantidadVehiculos;
+	public Fabricante fabricante;
+	static public int automoviles,camionetas,camiones;
 	
 	Vehiculo(String placa,int puertas,int velocidadMaxima,String nombre,int precio,int peso,String traccion,Fabricante fabricante){
 		if(this.getClass().getName()=="vehiculos.Camion") camiones++;
@@ -24,61 +24,61 @@ public class Vehiculo {
 		this.fabricante=fabricante;
 		
 	}
-	void vehiculosPorTipo() {
+	public void vehiculosPorTipo() {
 		System.out.printf("Automoviles:%d%nCamionetas:%d%nCamiones:%d",automoviles,camionetas,camiones);
 	}
-	protected int getPuertas(){
+	public int getPuertas(){
 		return this.puertas;
 	}
-	protected void setPuertas(int puertas) {
+	public void setPuertas(int puertas) {
 		this.puertas=puertas;
 	}
-	protected int getPrecio(){
+	public int getPrecio(){
 		return this.precio;
 	}
-	protected void setPrecio(int precio) {
+	public void setPrecio(int precio) {
 		this.precio=precio;
 	}
-	protected int getPeso(){
+	public int getPeso(){
 		return this.peso;
 	}
-	protected void setPeso(int peso) {
+	public void setPeso(int peso) {
 		this.peso=peso;
 	}
-	protected static int getCantidadVehiculos(){
+	public static int getCantidadVehiculos(){
 		return CantidadVehiculos;
 	}
-	protected static void setCantidadVehiculos(int cantidadVehiculos) {
+	public static void setCantidadVehiculos(int cantidadVehiculos) {
 		CantidadVehiculos=cantidadVehiculos;
 	}
-	protected int getVelocidadMaxima(){
+	public int getVelocidadMaxima(){
 		return this.velocidadMaxima;
 	}
-	protected void setVelocidadMaxima(int velocidadMaxima) {
+	public void setVelocidadMaxima(int velocidadMaxima) {
 		this.velocidadMaxima=velocidadMaxima;
 	}
-	protected String getPlaca(){
+	public String getPlaca(){
 		return this.placa;
 	}
-	protected void setEjes(String placa) {
+	public void setEjes(String placa) {
 		this.placa=placa;
 	}
-	protected String getNombre(){
+	public String getNombre(){
 		return this.nombre;
 	}
-	protected void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre=nombre;
 	}
-	protected String getTraccion(){
+	public String getTraccion(){
 		return this.traccion;
 	}
-	protected void setTraccion(String traccion) {
+	public void setTraccion(String traccion) {
 		this.traccion=traccion;
 	}
-	protected Fabricante getFabricante(){
+	public Fabricante getFabricante(){
 		return this.fabricante;
 	}
-	protected void setFabricante(Fabricante fabricante) {
+	public void setFabricante(Fabricante fabricante) {
 		this.fabricante=fabricante;
 	}
 	

@@ -6,10 +6,10 @@ public class Camion extends Vehiculo {
 		super(placa,2,80,nombre,precio,peso,"4X2",fabricante);
 		this.ejes=ejes;
 	}
-	protected int getEjes(){
+	public int getEjes(){
 		return this.ejes;
 	}
-	protected void setEjes(int eje) {
+	public void setEjes(int eje) {
 		this.ejes=eje;
 	}
 }

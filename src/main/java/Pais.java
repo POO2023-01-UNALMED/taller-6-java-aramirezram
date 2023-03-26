@@ -3,22 +3,22 @@ package vehiculos;
 import java.util.HashMap;
 
 public class Pais {
-	private String nombre;
-	static int maxi=0;
-	static String paismasven;
-	static HashMap<String, Integer> paises= new HashMap<>();
-	Pais(String nombre){
+	public String nombre;
+	public static int maxi=0;
+	public static String paismasven;
+	public static HashMap<String, Integer> paises= new HashMap<>();
+	public Pais(String nombre){
 		this.nombre=nombre;
 	}
 	
-	String getNombre() {
+	public String getNombre() {
 		return this.nombre;
 	}
-	void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre=nombre;
 	}
 	
-	static void contarpaises(String pais) {
+	public static void contarpaises(String pais) {
 		if(paises.containsKey(pais)) {
 			int sumara;
 			sumara=(int) paises.get(pais);
@@ -32,7 +32,7 @@ public class Pais {
 			paismasven=pais;
 			}
 	}
-	static Pais paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		return new Pais(paismasven);
 	}
 

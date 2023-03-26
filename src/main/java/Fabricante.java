@@ -3,32 +3,32 @@ package vehiculos;
 import java.util.HashMap;
 
 public class Fabricante {
-	private String nombre;
-	static int maxi=0;
-	static String fabrimasven;
-	static Fabricante fabmayor;
-	static HashMap<Fabricante, Integer> fabricas= new HashMap<>();
-	Pais pais;
+	public String nombre;
+	public static int maxi=0;
+	public static String fabrimasven;
+	public static Fabricante fabmayor;
+	public static HashMap<Fabricante, Integer> fabricas= new HashMap<>();
+	public Pais pais;
 	
-	Fabricante(String nombre, Pais pais){
+	public Fabricante(String nombre, Pais pais){
 		this.nombre=nombre;
 		this.pais=pais;
 		Pais.contarpaises(pais.getNombre());
 	}
-	String getNombre() {
+	public String getNombre() {
 		return this.nombre;
 	}
-	void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre=nombre;
 	}
-	Pais getPais() {
+	public Pais getPais() {
 		return this.pais;
 	}
-	void setPais(Pais pais) {
+	public void setPais(Pais pais) {
 		this.pais=pais;
 	}
 	
-	static void contarpaises(Fabricante fabricante) {
+	public static void contarpaises(Fabricante fabricante) {
 		if(fabricas.containsKey(fabricante)) {
 			int sumara;
 			sumara=(int) fabricas.get(fabricante);
@@ -43,7 +43,7 @@ public class Fabricante {
 			}
 	}
 	
-	static Fabricante fabricaMayorVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		return fabmayor;
 	}
 	
